@@ -6,6 +6,8 @@ var App = Backbone.Router.extend({
 	routes: {
 		'': 'home',
 		'edit': 'edit',
+		'profile': 'profile'
+
 	},
 	profile: function() {
 		$('.page').hide();
@@ -48,7 +50,7 @@ user.on('change', function(newModel){
 		console.log(newModel)
 		spnname.text(user.get('name'));
 		spnrole.text(user.get('role'));
-		console.log('change'
+		console.log('change');
 		user.save();
 
 	});
